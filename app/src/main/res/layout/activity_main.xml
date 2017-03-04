@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/master"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bestyan.kieserapp.MainActivity">
+
+        <TableLayout
+            android:id="@+id/tableMaster"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/scrollviewRows"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible" >
+
+            <TableRow
+                android:id="@+id/trHeadlines"
+                style="@style/masterTableRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="@dimen/tableMasterRowPadding"
+                android:paddingTop="@dimen/tableMasterRowPadding">
+
+                <TextView
+                    android:id="@+id/textGeraet"
+                    style="@style/colGeraetHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/geraet" />
+
+                <TextView
+                    android:id="@+id/textGewicht"
+                    style="@style/colGewichtHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gewicht" />
+
+                <TextView
+                    android:id="@+id/textEinstellungen"
+                    style="@style/colEinstellungenHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/einstellungen" />
+
+                <TextView
+                    android:id="@+id/textStart"
+                    style="@style/colStartHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start" />
+
+                <TextView
+                    android:id="@+id/textUhr"
+                    style="@style/colUhrHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uhr" />
+
+                <TextView
+                    android:id="@+id/textErledigt"
+                    style="@style/colErledigtHeadline"
+                    android:layout_height="wrap_content"
+                    android:text="@string/erledigt" />
+
+                <TextView
+                    android:id="@+id/textDelete"
+                    style="@style/colDeleteHeadline"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+        </TableLayout>
+    <ScrollView
+        android:id="@+id/scrollviewRows"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tableMaster" >
+        <TableLayout
+            android:id="@+id/tableRows"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnReset"
+        style="@style/belowTableButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetProgress"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/scrollviewRows"
+        app:layout_constraintTop_toBottomOf="@+id/scrollviewRows" />
+
+    <Button
+        android:id="@+id/btnNeueZeile"
+        style="@style/belowTableButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="addNeueZeile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnReset"
+        app:layout_constraintTop_toBottomOf="@+id/scrollviewRows"
+        android:text="@string/neueZeile" />
+
+</android.support.constraint.ConstraintLayout>

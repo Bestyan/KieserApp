@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="0dp"
+    android:visibility="visible">
+
+    <EditText
+        android:id="@+id/tfGeraet"
+        style="@style/colGeraet"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textCapCharacters|textNoSuggestions"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/tfGewicht"
+        style="@style/colGewicht"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/tfEinstellungen"
+        style="@style/colEinstellungen"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine|textNoSuggestions"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/colStart"
+        android:layout_height="wrap_content"
+        android:onClick="startTimer"
+        android:text="@string/startCell"
+        android:textSize="@dimen/tableMasterRowTextSize" />
+
+    <EditText
+        android:id="@+id/textUhr"
+        style="@style/colUhr"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/uhrDescription"
+        android:ems="10"
+        android:imeOptions="actionDone"
+        android:inputType="textNoSuggestions|number" />
+
+    <CheckBox
+        android:id="@+id/cbErledigt"
+        style="@style/colErledigt"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        style="@style/colDelete"
+        android:layout_height="wrap_content"
+        android:onClick="deleteRow"
+        android:text="@string/zeileLoeschen"
+        android:textSize="@dimen/tableMasterRowTextSize" />
+</TableRow>

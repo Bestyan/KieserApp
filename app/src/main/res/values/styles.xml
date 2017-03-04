@@ -1,0 +1,107 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="colGeraet" parent="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+    </style>
+
+    <style name="colGeraetHeadline" parent="colGeraet">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+
+    <style name="colGewicht" parent="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+    </style>
+
+    <style name="colGewichtHeadline" parent="colGewicht">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+
+    <style name="colEinstellungen" parent="tableMasterCell">
+        <item name="android:layout_weight">0.2</item>
+    </style>
+
+    <style name="colEinstellungenHeadline" parent="colEinstellungen">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+
+    <style name="colStart" parent="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+    </style>
+
+    <style name="colStartHeadline" parent="colStart">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+
+    <style name="colUhr" parent="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+    </style>
+
+    <style name="colUhrHeadline" parent="colUhr">
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="colErledigt" parent="tableMasterCell">
+        <item name="android:layout_weight">0.05</item>
+    </style>
+
+    <style name="colErledigtHeadline" parent="colErledigt">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="colDelete" parent="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="colDeleteHeadline" parent="colDelete">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">4dp</item>
+    </style>
+
+    <style name="tableMasterCell">
+        <item name="android:layout_weight">0.1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="masterTableRow">
+    </style>
+
+    <style name="belowTableButton">
+        <item name="android:textSize">10sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="changeButton">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+
+    <style name="textTimer">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:background">@drawable/border_rectangle</item>
+    </style>s
+
+</resources>

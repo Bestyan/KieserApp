@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tableMasterColumnPadding">2.5dp</dimen>
+    <dimen name="tableMasterRowPadding">0dp</dimen>
+    <dimen name="tableMasterRowTextSize">12sp</dimen>
+</resources>

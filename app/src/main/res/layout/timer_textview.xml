@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textTimer"
+    style="@style/textTimer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:onClick="toggleTimer"
+    android:text="@string/uhrDefault"
+    android:visibility="visible">
+
+</TextView>
