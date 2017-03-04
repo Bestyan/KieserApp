@@ -37,8 +37,7 @@ class MainActivity extends Activity {
             EditText uhr = (EditText) row.findViewById(R.id.textUhr);
             checkbox.setChecked(false);
             uhr.setText("");
-            //uhr.getBackground().setTintMode(PorterDuff.Mode.LIGHTEN);
-            uhr.getBackground().setTint(Color.WHITE);
+            uhr.getBackground().setTint(Color.TRANSPARENT);
         }
     }
     

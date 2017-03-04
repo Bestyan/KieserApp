@@ -63,6 +63,9 @@ public class StopwatchHandler extends Handler {
                 this.removeMessages(UPDATE_TIMER); // no more updates.
                 timer.stop();//stop timer
                 running = false;
+                if(!goalReached){
+                    smallView.setBackgroundColor(Color.rgb(0xff, 0xb6, 0x73));
+                }
                 break;
             
             default:
