@@ -43,13 +43,13 @@
         android:textSize="@dimen/tableMasterRowTextSize" />
 
     <EditText
-        android:id="@+id/textUhr"
+        android:id="@+id/tfUhr"
         style="@style/colUhr"
         android:layout_height="wrap_content"
         android:contentDescription="@string/uhrDescription"
         android:ems="10"
         android:imeOptions="actionDone"
-        android:inputType="textNoSuggestions|number" />
+        android:inputType="textNoSuggestions|number"/>
 
     <CheckBox
         android:id="@+id/cbErledigt"

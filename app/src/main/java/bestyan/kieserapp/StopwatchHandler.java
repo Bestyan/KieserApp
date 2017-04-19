@@ -16,23 +16,28 @@ import java.text.SimpleDateFormat;
 @SuppressWarnings("unused")
 public class StopwatchHandler extends Handler {
     private final Stopwatch timer = new Stopwatch();
-    private final DateFormat formatter = new SimpleDateFormat("mm:ss");
+    private final DateFormat formatter = new SimpleDateFormat("mm:ss.SSS");
     public static final int START_TIMER = 0;
     public static final int UPDATE_TIMER = 1;
     public static final int STOP_TIMER = 2;
     private final int REFRESH_RATE = 100;
     
     private TextView timerView;
-    private EditText smallView;
+    private EditText tfUhr;
     private boolean running = false;
     private long goal;
     private boolean goalReached = false;
     
-    public StopwatchHandler(TextView timerView, EditText smallView){
+    public StopwatchHandler(TextView timerView, EditText tfUhr){
         super();
         this.timerView = timerView;
-        this.smallView = smallView;
-        goal = Long.parseLong(smallView.getText().toString())*1000;
+        this.tfUhr = tfUhr;
+        String goalText = tfUhr.getText().toString();
+        if(goalText.isEmpty()){
+            goal = 0;
+        } else{
+            goal = Long.parseLong(tfUhr.getText().toString())*1000;
+        }
     }
     
     @Override
@@ -52,7 +57,7 @@ public class StopwatchHandler extends Handler {
                         goalReached = true;
                         timerView.getBackground().setTint(Color.rgb(0x54, 0xa6, 0x63));
                         timerView.getBackground().setTintMode(PorterDuff.Mode.DARKEN);
-                        smallView.setBackgroundColor(Color.rgb(0x54, 0xa6, 0x63));
+                        tfUhr.setBackgroundColor(Color.rgb(0x54, 0xa6, 0x63));
                     }
                 }
                 timerView.setText(formatter.format(elapsedTime));
@@ -64,7 +69,7 @@ public class StopwatchHandler extends Handler {
                 timer.stop();//stop timer
                 running = false;
                 if(!goalReached){
-                    smallView.setBackgroundColor(Color.rgb(0xff, 0xb6, 0x73));
+                    tfUhr.setBackgroundColor(Color.rgb(0xff, 0xb6, 0x73));
                 }
                 break;
             
